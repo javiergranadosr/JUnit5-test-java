@@ -50,7 +50,7 @@ Se recomienda utilizar la siguiente importación: import static org.junit.jupite
     }
 ```
 
-## Covertura
+## Cobertura
 La cobertura en pruebas unitarias en Java (y en general en otros lenguajes) es una métrica que mide el porcentaje de código que se ejecuta al realizar pruebas unitarias. Este porcentaje refleja qué tan bien están siendo probadas las clases, métodos y líneas de código en tu aplicación.
 
 ## Herramientas para medir cobertura en Java
