@@ -1,4 +1,9 @@
 # Pruebas unitarias utilizando JUnit5
+
+## IMPORTANTE
+Todas las clases que tengan dependencias, se utiliza mockito con JUnit, las clases que no tengan depdencias se pueden probar
+con JUnit5.
+
 Agregar la dependencia JUnit en el archivo .pom
 
 ```
@@ -67,6 +72,15 @@ Ejemplo Configuración del plugin para medir cobertura de las pruebas unitarias 
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.12</version>
+                   <!-- AQUI AGREGAMOS LOS PAQUETES O CLASES QUE DESEAMOS EXCLUIR DE LOS TEST UNITARIOS -->
+                <configuration>
+                    <excludes>
+                        <!-- Excluimos la clase Main.class -->
+                        <exclude>**/Main.class</exclude>
+                        <!-- Excluimos la clase Player.class -->
+                        <exclude>**/entity/Player.class</exclude>
+                    </excludes>
+                </configuration>
                 <executions>
                     <execution>
                         <goals>
